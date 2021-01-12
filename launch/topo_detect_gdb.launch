@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="corner_detect" type="lasescan" name="laser_scan" output="log" launch-prefix="xterm -e gdb --args"/>
+
+</launch>

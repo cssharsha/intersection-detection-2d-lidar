@@ -1,0 +1,12 @@
+<launch>
+	<env name="ROSCONSOLE_CONFIG_FILE"
+		value="$(find corner_detect)/config/rosconsole.conf"/>
+	<node pkg="corner_detect" type="lasescan" name="laser_scan" output="screen" respawn="true">
+		<param name="odom_frame" value="odom" />
+		<param name="base_link_frame" value="base_link" />
+		<param name="reach_thresh" value="0.5"/>
+		<param name="same_thresh" value="1.5"/>
+		<param name="confidence_count" value="5"/>
+		<param name="confidence_probability" value="0.75"/>
+	</node>
+</launch>
